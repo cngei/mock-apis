@@ -1,0 +1,26 @@
+{
+  "title": "Sezione",
+  "type": "object",
+  "x-tags": [
+    "organization"
+  ],
+  "description": "This model contains a Sezione",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "gruppi": {
+      "type": "array",
+      "items": {
+        "$ref": "./Gruppo.v1.json"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ]
+}

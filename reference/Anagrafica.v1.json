@@ -1,0 +1,128 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Anagrafica",
+    "version": "1.0",
+    "description": "Returns data regarding CNGEI members"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/sezioni": {
+      "get": {
+        "summary": "List all Sezioni",
+        "tags": [
+          "organization"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../models/Sezione.v1.json"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-sezioni",
+        "description": "Return a list of all the Sezioni"
+      },
+      "post": {
+        "summary": "Create a Sezione",
+        "tags": [
+          "organization"
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Sezione.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post-sezioni",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/Sezione.v1.json"
+              }
+            }
+          }
+        },
+        "description": "Create a Sezione"
+      },
+      "parameters": []
+    },
+    "/sezioni/{id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "number"
+          },
+          "name": "id",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "patch": {
+        "summary": "Update a Sezione",
+        "tags": [
+          "organization"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Sezione.v1.json"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "patch-sezioni-id",
+        "description": "Update a Sezione",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/Sezione.v1.json"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a Sezione",
+        "tags": [
+          "organization"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "operationId": "delete-sezioni-id",
+        "description": "Delete a Sezione"
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {}
+  }
+}

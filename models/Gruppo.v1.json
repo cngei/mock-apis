@@ -1,0 +1,24 @@
+{
+  "title": "Gruppo",
+  "type": "object",
+  "x-tags": [
+    "organization"
+  ],
+  "x-examples": {},
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "identifier": {
+      "type": "string",
+      "description": "For \"Brescia 2\", this would be \"2\". For \"Brescia - Rovato\", this would be \"Rovato\""
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "identifier"
+  ]
+}
